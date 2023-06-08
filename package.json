@@ -1,0 +1,47 @@
+{
+  "name": "music-catalog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js && tailwindcss -i ./src/styles/tailwind/styles.css -o ./dist/output.css",
+    "serve": "http-server dist --port 9000",
+    "build-serve": "npm run build && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.2.4",
+    "style-loader": "^3.3.2",
+    "tailwindcss": "^3.3.1",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2",
+    "webpack-merge": "^5.8.0",
+    "workbox-precaching": "^7.0.0",
+    "workbox-webpack-plugin": "^6.5.4"
+  },
+  "dependencies": {
+    "idb": "^7.1.1",
+    "jquery": "^3.6.4",
+    "regenerator-runtime": "^0.13.11",
+    "swiper": "^9.2.0",
+    "workbox-window": "^6.5.4"
+  }
+}
